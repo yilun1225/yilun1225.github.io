@@ -1,0 +1,33 @@
+project:
+  type: website
+website:
+  site-url: https://yilun1225.github.io
+  title: Yilun Chen
+  search: false
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Research
+        href: publication_bydate.qmd
+      # - text: Teaching
+      #   href: teaching.qmd
+      # - text: CV
+      #   href: cv.qmd
+  page-footer:
+    left: "© 2026 Yilun Chen"
+    # right: |
+    #   Made with [Quarto](https://quarto.org)
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css    # Quarto compiles it automatically
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    toc: true
+    code-copy: true
+    math: mathjax
+  # include-in-header:
+  #   - _partials/head.html

@@ -1,0 +1,282 @@
+---
+toc: false
+sidebar: false
+format:
+  html:
+    css: styles.css
+---
+
+<div class="section-title">Working Papers</div>
+<ul id="pub-preprint" class="pubs"></ul>
+
+<div class="section-title">Published and Accepted</div>
+<ul id="pub-published" class="pubs"></ul>
+
+<script type="application/json" id="papers-data">
+[
+  {
+    "title": "Beyond Hindsight: A Constant-Loss Framework for Dynamic Resource Allocation",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7516598",
+    "authors": "Wenjia Wang",
+    "year": 2026,
+    "bucket": "Preprint",
+    "rank": 1,
+    "status": "Working paper.",
+    "awards": [],
+    "teaser": "CE acheives constant loss against DP under smoothness and non-degeneracy, even with correlation!",
+    "abstract": "We study stochastic dynamic resource allocation with continuously distributed rewards. We develop an analytical framework that bounds the additive performance loss of threshold policies directly against the dynamic-programming (DP) optimum. The framework reduces this comparison to controlling the Bellman residual of a tractable value approximation and the discrepancy between its induced thresholds and those used by the policy. Applying this framework, we show that the classical certainty-equivalent (CE) policy incurs a constant expected loss, independent of the time horizon, under suitable regularity and non-degeneracy conditions. We showcase the power of this framework in the multi-secretary problem with our guarantee covering i.i.d., independent but non-identically distributed, and Markov-modulated rewards. We also provide an extension to online linear programming problem, demonstrating its capability of handling multi-dimensional problems beyond multi-secretary. Together, these results sharpen our understanding of CE and establish its near-optimality for dynamic resource allocation problems across a substantially broader class of stochastic models."
+  },
+  {
+    "title": "Sharp Characterizatioin of Bias in Post-Bandit Inference",
+    "url": "https://arxiv.org/pdf/2608.01069v2",
+    "authors": "Lisu Wang and Jiaqi Lu",
+    "year": 2026,
+    "bucket": "Preprint",
+    "rank": 1,
+    "status": "Working paper.",
+    "awards": [
+        {"type": "other", "text": "Shorter version in NeurIPS 2026 Workshop MLxOR"}
+    ],
+    "teaser": "A precise quantification of sample mean bias of data collected from bandit experiments.",
+    "abstract": "Bandit algorithms generate data for downstream inference, but adaptive sampling biases post-bandit sample means. We analyze this bias for stable index algorithms, including \\texttt{UCB1} and its generalizations, and derive sharp leading-order expressions for the sample-mean bias and expected $Z$-statistic. Our characterization reveals the algorithmic origin of bias through a key index-function-dependent quantity, which we term \\emph{effective exploration rate}. For example, under \\texttt{UCB1}, the effective exploration rate is of order $\\sqrt{\\log T}$, and the standardized bias of any arm (that is not uniquely optimal) decays at the extremely slow rate $1/\\sqrt{\\log T}$. We also show how the choice of the index function affects both regret and bias, which reveals a regret-bias trade-off: more exploratory algorithm reduces bias but increases regret. Our sharp characterization for bias uses a novel empirical fluid approximation of the algorithm's sampling dynamics, which may be of independent interest."
+  },
+  {
+    "title": "Bandit Allocational Instability",
+    "url": "https://arxiv.org/pdf/2602.07472",
+    "authors": "Jiaqi Lu",
+    "year": 2026,
+    "bucket": "Preprint",
+    "rank": 2,
+    "status": "Under revision.",
+    "awards": [
+        { "type": "other", "text": "Preliminary version in ACM EC'26" }
+    ],
+    "teaser": "A fundamental tradeoff between regret and the variability of pull allocation in bandit learning.",
+    "abstract": "When multi-armed bandit (MAB) algorithms allocate pulls among competing arms, the resulting allocation can exhibit huge variation. This is particularly harmful in modern applications such as learning-enhanced platform operations and statistical inference using bandit-collected data. Thus motivated, we introduce a new performance metric of MAB algorithms termed allocation variability, which is the largest (over arms) standard deviation of an arm's number of pulls. We establish a fundamental trade-off between allocation variability and regret, the canonical performance metric of reward maximization. In particular, for any algorithm, the worst-case regret $R_T$ and worst-case allocation variability $S_T$ must satisfy $R_T   S_T=\\Omega(T^{3/2})$ as $T \\to \\infty$, as long as $R_T=o(T)$. This indicates that any minimax regret-optimal algorithm must incur worst-case allocation variability $\\Theta(T)$, the largest possible scale; while any algorithm with sublinear worst-case regret must necessarily incur $S_T= \\omega(\\sqrt{T})$. We further show that this lower bound is essentially tight, and that any point on the Pareto frontier $R_T  S_T=\\Theta(T^{3/2})$ can be achieved (up to a polylogarithmic factor in T) by a simple tunable algorithm UCB-f, a generalization of the classic UCB1. Finally, we discuss implications for platform operations and for statistical inference, when bandit algorithms are used. As a byproduct of our result, we resolve an open question of Praharaj and Khamaru (2025)."
+  },
+  {
+    "title": "A Characterization of Sample Adaptivity in UCB Data",
+    "url": "https://arxiv.org/pdf/2503.04855",
+    "authors": "Jiaqi Lu",
+    "year": 2025,
+    "bucket": "Preprint",
+    "rank": 3,
+    "status": "Working paper.",
+    "awards": [
+        {"type": "other", "text": "Shorter version in NeurIPS 2026 Workshop MLxOR"}
+    ],
+    "teaser": "How far does bandit-collected data deviate from i.i.d.-sampling?",
+    "abstract": "We characterize a joint CLT of the number of pulls and the sample mean reward of the arms in a stochastic two-armed bandit environment under UCB algorithms. Several implications of this result are in place: (1) a nonstandard CLT of the number of pulls hence pseudo-regret that smoothly interpolates between a standard form in the large arm gap regime and a slow-concentration form in the small arm gap regime, and (2) a heuristic derivation of the sample bias up to its leading order from the correlation between the number of pulls and sample means. Our analysis framework is based on a novel perturbation analysis, which is of broader interest on its own."
+  },
+  {
+    "title": "Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for Online Linear Programming",
+    "url": "https://arxiv.org/pdf/2501.01716",
+    "authors": "Wenjia Wang",
+    "year": 2025,
+    "bucket": "Preprint",
+    "rank": 5,
+    "status": "Under revision.",
+    "awards": [],
+    "teaser": "Is non-degeneracy really essential for CE to achieve low regret?",
+    "abstract": "The Certainty Equivalent (CE) heuristic is a widely-used algorithm for various dynamic resource allocation problems in OR and OM. Despite its popularity, existing theoretical guarantees of CE are limited to settings satisfying restrictive fluid regularity conditions, particularly, the non-degeneracy conditions, under the widely held belief that the violation of such conditions leads to performance deterioration and necessitates algorithmic innovation beyond CE. In this work, we conduct a refined performance analysis of CE within the general framework of online linear programming. We show that CE achieves uniformly near-optimal regret (up to a polylogarithmic factor in T) under only mild assumptions on the underlying distribution, without relying on any fluid regularity conditions. Our result implies that, contrary to prior belief, CE effectively beats the curse of degeneracy for a wide range of problem instances with continuous conditional reward distributions, highlighting the distinction of the problem’s structure between discrete and non-discrete settings. Our explicit regret bound interpolates between the mild $(\\log T)^2$ regime and the worst-case $\\sqrt{T}$ regime with a parameter $\\beta$ quantifying the minimal rate of probability accumulation of the conditional reward distributions, generalizing prior findings in the multisecretary setting. To achieve these results, we develop novel algorithmic analytical techniques. Drawing tools from the empirical processes theory, we establish strong concentration analysis of the solutions to random linear programs, leading to improved regret analysis under significantly relaxed assumptions. These techniques may find potential applications in broader online and offline stochastic decision-making contexts."
+  },
+  {
+    "title": "Online Stochastic Packing with General Correlations",
+    "url": "https://arxiv.org/pdf/2508.13458",
+    "authors": "Sabri Cetin and David A. Goldberg",
+    "year": 2025,
+    "bucket": "Preprint",
+    "rank": 4,
+    "status": "Under revision.",
+    "teaser": "A constant-time approximation algorithm for online packing under arbitrary dependence.",
+    "abstract": "There has been a growing interest in studying online stochastic packing under more general correlation structures, motivated by the complex data sets and models driving modern applications. Several past works either assume correlations are weak or have a particular structure, have a complexity scaling with the number of Markovian 'states of the world' (which may be exponentially large e.g. in the case of full history dependence), scale poorly with the horizon T, or make additional continuity assumptions. Surprisingly, we show that for all 𝜖, the online stochastic packing linear programming problem with general correlations (suitably normalized and with sparse columns) has an approximately optimal policy (with optimality gap $\\epsilon T$) whose per-decision runtime scales as the time to simulate a single sample path of the underlying stochastic process (assuming access to a Monte Carlo simulator), multiplied by a constant independent of the horizon or number of Markovian states.We derive analogous results for network revenue management, and online bipartite matching and independent set in bounded-degree graphs, by rounding. Our algorithms implement stochastic gradient methods in a novel on-the-fly/recursive manner for the associated massive deterministic-equivalent linear program on the corresponding probability space."
+  },
+  {
+    "title": "Incentivizing Resource Pooling",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4586771",
+    "authors": "Chen Chen and Pengyu Qian",
+    "year": 2025,
+    "bucket": "Published",
+    "rank": 1,
+    "status": "<i><b>Management Science</b></i>. <a href='https://doi.org/10.1287/mnsc.2023.03550'>[link]</a>",
+    "awards": [
+      { "type": "award", "text": "First Place, 2024 INFORMS JFIG Best Paper Competition" },
+      { "type": "award", "text": "First Prize, 2024 CSAMSE Best Paper Award" },
+      { "type": "other", "text": "Presentation at MSOM Service Management SIG 2024" },
+      { "type": "other", "text": "Preliminary version in ACM EC'24 <a href='https://dl.acm.org/doi/10.1145/3670865.3673450'>[link]</a>" }
+    ],
+    "teaser": "A token mechanism that aligns self-interested servers to collectively achieve centralized efficiency.",
+    "abstract": "Resource pooling improves system efficiency drastically in large stochastic systems, but its effective implementation in decentralized systems remains relatively underexplored. This paper studies how to incentivize resource pooling when agents are self-interested, and their states are private information. Our primary motivation is applications in the design of decentralized computing markets, among others. We study a standard multi-server queueing model in which each server is associated with an M/M/1 queue and aims to minimize its time-average job holding and processing costs. We design a simple token-based mechanism where servers can earn tokens by offering help and spend tokens to request help from other servers, all in their self-interest. The mechanism induces a complex game among servers. We employ the fluid mean-field equilibrium (FMFE) concept to analyze the system, combining mean-field approximation with fluid relaxation. This framework enables us to derive a closed-form characterization of servers' FMFE strategies. We show that these FMFE strategies approximate well the servers' rational behavior. We leverage this framework to optimize the design of the mechanism and present our main results: As the number of servers increases, the proposed mechanism incentivizes complete resource pooling---that is, the system dynamics and performance under our mechanism match those under centralized control. Finally, we show that our mechanism achieves the first-best performance even when helping others incurs higher job processing costs and remains nearly optimal in settings with heterogeneous servers."
+  },
+  {
+    "title": "Feature-Based Dynamic Matching",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451799",
+    "authors": "Yash Kanoria, Akshit Kumar and Wenxin Zhang",
+    "year": 2025,
+    "bucket": "Published",
+    "rank": 2,
+    "status": "<i><b>Operations Research</b></i>. <a href='https://doi.org/10.1287/opre.2024.0730'>[link]</a>",
+    "awards": [
+      { "type": "award", "text": "First Place, 2024 INFORMS RMP Jeff McGill Student Paper Competition (awarded to Akshit Kumar)" },
+      { "type": "award", "text": "Third Place, 2025 Michael H. Rothkopf Junior Research Paper Prize (awarded to Akshit Kumar)" },
+      { "type": "other", "text": "Preliminary version in ACM EC'23 <a href='https://dl.acm.org/doi/10.1145/3580507.3597797'>[link]</a> | <a href= 'https://nickarnosti.com/blog/soar/'>Nick Arnosti's blog</a> "}
+    ],
+    "teaser": "A lightweight MPC-inspired algorithm with near-optimal matching performance.",
+    "abstract": "Motivated by matching platforms that match agents in a centralized manner, we study dynamic two-sided matching in a setting where both customers (demand) and service providers (supply) are heterogeneous and the pool of service providers is limited. We model heterogeneity on the two sides of the market by demand weight vectors drawn i.i.d. from some distribution, and supply feature vectors drawn i.i.d. from a (possibly) different distribution. The matching of a demand-supply pair generates a matching value that depends on their weight and feature vectors. We adopt a notion of regret, specifically the additive loss relative to the value (per match) achievable in the limiting hindsight optimum as our performance metric for matching policies. Simple myopic policies suffer non-vanishing regret in large markets. We propose a forward-looking supply-aware policy dubbed Simulate-Optimize-Assign-Repeat (SOAR) which balances between producing high match value for the current match and preserving valuable supply for future customers. We prove that SOAR achieves the optimal regret scaling under different assumptions on the demand and supply distributions. En-route to proving our guarantees we develop a novel framework for analyzing the performance of our SOAR policy which may be of broader interest. As a corollary of our techniques, we also resolve an open problem posed in Kanoria [2022]."
+  },
+{
+    "title": "Polynomial time algorithm for optimal stopping with fixed accuracy",
+    "url": "https://arxiv.org/pdf/1807.02227",
+    "authors": "David A. Goldberg",
+    "year": 2026,
+    "bucket": "Accepted",
+    "rank": 4,
+    "status": "<i><b>Stochastic Systems</b></i>. <a href='https://doi.org/10.1287/stsy.2024.0075'>[link]</a>",
+    "awards": [
+      { "type": "award", "text": "First Place, 2019 INFORMS Nicholson Student Paper Competition" },
+      { "type": "award", "text": "Finalist, 2018 INFORMS Section on Finance Student Best Paper Award" }
+    ],
+    "teaser": "PTAS for optimal stopping under arbitrary dependence.",
+    "abstract": "The optimal stopping (OS) problem is important to multiple academic communities and applications. Modern OS tasks often have long horizon and complicated, high-dimensional dynamics, making them especially challenging. Standard dynamic programming (DP) formulation has computational cost scaling exponentially in the horizon and the underlying dimension, suffering from the curse of dimensionality. In this work, we develop a novel expansion representation of the optimal stopping value that deviates from the DP formulation. Truncating this expansion yields a simulation-based algorithm that returns an  -optimal solution (both stopping policies and approximate optimal values) with computational complexity scaling polynomially in the time horizon and the underlying dimension. Our approach is closely related to the martingale duality of OS, which may be of independent theoretical interest."
+  },
+{
+    "title": "Managing Newsvendors via Demand Shifting",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4727705",
+    "authors": "Jiaqi Lu",
+    "year": 2026,
+    "bucket": "Accepted",
+    "rank": 3,
+    "status": "<i><b>Operations Research</b></i>. accepted.",
+    "awards": [
+      { "type": "other", "text": "Preliminary version in ACM EC'24 <a href='https://dl.acm.org/doi/10.1145/3670865.3673568'>[link]</a>" }
+    ],
+    "teaser": "Demand reshaping is a powerful control lever.",
+    "abstract": "The increasingly prevalent 'fulfillment by platform‘ practice in the digital economy presents platforms with the unique challenge of managing their third-party sellers' autonomous inventory decision-making. In this work, we explore a novel idea to mitigate this challenge through nudging demand among sellers, which reshapes their perceived demand and incentivizes them to make platform-favorable inventory decisions. To this end, we study a stylized Stackelberg game between a platform and a continuum of third-party sellers selling substitutable products on the platform. The platform aims to design a demand nudging policy to maximize her profit, while the sellers, in response, determine their inventory according to the post-nudge demand in a newsvendor manner. We establish in closed form the platform's optimal policy. It employs a simple cut-off structure called defluctuating and resembles risk pooling in the centralization setting where the platform can make joint demand-substitution and inventory decisions. Despite the power of this control on the off-equilibrium path, we show that it is Pareto-improving for both the platform and the sellers under a mild condition. Furthermore, when the products are substitutable enough, the platform can achieve the centralization benchmark. On the contrary, if the products are not substitutable enough, the platform's service level to the customers may, in certain primitive regimes, decrease."
+  }
+]
+</script>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const dataEl = document.getElementById('papers-data');
+  const PAPERS = JSON.parse((dataEl?.textContent || '[]').trim());
+
+  const ulPre = document.getElementById('pub-preprint');
+  const ulPub = document.getElementById('pub-published');
+
+  function inferBucket(status) {
+    const s = (status || '').toLowerCase();
+    return (s.includes('published') || s.startsWith('forthcoming') ||
+            s.startsWith('accepted') || s.includes('conditionally accepted'))
+      ? 'Published' : 'Preprint';
+  }
+
+  const byYear = (a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    if (a.rank !== undefined && b.rank !== undefined) return a.rank - b.rank;
+    if (a.rank !== undefined) return -1;
+    if (b.rank !== undefined) return 1;
+    return a.title.localeCompare(b.title);
+  };
+
+  function liFor(p) {
+    const li = document.createElement('li');
+    li.className = 'paper';
+    if (p.year) li.dataset.year = p.year;
+
+    const titleP = document.createElement('p');
+    titleP.className = 'title';
+    const a = document.createElement('a');
+    a.href = p.url || '#';
+    a.target = '_blank';
+    a.textContent = p.title;
+    titleP.appendChild(a);
+    if (p.authors && p.authors.trim()) {
+      const spanAuth = document.createElement('span');
+      spanAuth.className = 'authors-after';
+      spanAuth.textContent = `with ${p.authors}`;
+      titleP.appendChild(spanAuth);
+    }
+    li.appendChild(titleP);
+
+    if (p.status && p.status.trim()) {
+      const st = document.createElement('div');
+      st.className = 'status-line';
+      st.innerHTML = (p.status || '').replace(/\n/g, '<br>');
+      li.appendChild(st);
+    }
+
+    if (p.awards && p.awards.length) {
+      const wrap = document.createElement('div');
+      wrap.className = 'awards-wrap';
+      const ul = document.createElement('ul');
+      ul.className = 'awards-list';
+      (p.awards || []).forEach(w => {
+        const liw = document.createElement('li');
+        liw.className = 'award-item ' + ((w.type === 'other') ? 'other' : 'award');
+        liw.innerHTML = w.text;
+        ul.appendChild(liw);
+      });
+      wrap.appendChild(ul);
+      li.appendChild(wrap);
+    }
+
+    if ((p.teaser && p.teaser.trim()) || (p.abstract && p.abstract.trim())) {
+      const actions = document.createElement('p');
+      actions.className = 'paper-actions';
+
+      if (p.teaser && p.teaser.trim()) {
+        const spanTeaser = document.createElement('span');
+        spanTeaser.className = 'teaser-text';
+        spanTeaser.textContent = p.teaser;
+        actions.appendChild(spanTeaser);
+      }
+
+      if (p.abstract && p.abstract.trim()) {
+        const more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'more-btn';
+        more.textContent = 'Abstract';
+        actions.appendChild(more);
+
+        const absP = document.createElement('p');
+        absP.className = 'abstract hidden';
+        absP.textContent = p.abstract + ' ';
+        const lessBtn = document.createElement('button');
+        lessBtn.type = 'button';
+        lessBtn.className = 'less-btn';
+        lessBtn.textContent = 'Hide abstract';
+        absP.appendChild(lessBtn);
+
+        more.addEventListener('click', () => {
+          more.classList.add('hidden');
+          absP.classList.remove('hidden');
+        });
+        lessBtn.addEventListener('click', () => {
+          absP.classList.add('hidden');
+          more.classList.remove('hidden');
+        });
+
+        li.appendChild(actions);
+        li.appendChild(absP);
+      } else {
+        li.appendChild(actions);
+      }
+    }
+
+    return li;
+  }
+
+  const preprint = [], published = [];
+  PAPERS.forEach(p => {
+    const bucket = (p.bucket || inferBucket(p.status) || '').toLowerCase();
+    (bucket.startsWith('pub') || bucket.startsWith('acc') ? published : preprint).push(p);
+  });
+
+  preprint.sort(byYear);
+  published.sort(byYear);
+
+  preprint.forEach(p => ulPre.appendChild(liFor(p)));
+  published.forEach(p => ulPub.appendChild(liFor(p)));
+});
+</script>

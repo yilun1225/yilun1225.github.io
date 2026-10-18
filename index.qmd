@@ -1,0 +1,54 @@
+---
+toc: false
+sidebar: false
+format:
+  html:
+    css: styles.css
+---
+
+<section class="home-profile">
+<div class="home-info">
+<div class="home-name" role="heading" aria-level="1">
+<span class="latin-name">Yilun Chen</span>
+<span class="chinese-name">陈逸伦</span>
+</div>
+<p class="appointment">
+Assistant Professor<br>
+School of Data Science, CUHK-Shenzhen
+</p>
+
+<div class="profile-links" aria-label="Contact and academic profiles">
+<span><i class="fa-solid fa-envelope"></i> chenyilun at cuhk dot edu dot cn</span>
+<span><i class="fa-solid fa-location-dot"></i> 322b Daoyuan Building</span>
+<a href="https://scholar.google.com/citations?user=zay6W5kAAAAJ&hl=en"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+</div>
+</div>
+
+<figure class="portrait-panel">
+<img src="assets/me.jpg" alt="Yilun Chen" class="headshot-rect">
+</figure>
+</section>
+
+<section class="home-section">
+<h2>About</h2>
+<p>
+I am an Assistant Professor in the School of Data Science at The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen). Previously, I was a postdoctoral researcher at Columbia Business School, where I was hosted by Yash Kanoria. I received my Ph.D. in Operations Research from Cornell University under the supervision of David Goldberg, and my B.S. in Mathematics from Yuanpei College, Peking University.
+</p>
+</section>
+
+<section class="home-section">
+<h2>Research</h2>
+<p>
+My research is in Operations Research, particularly stochastic modeling. I often find myself drawn to problems at the intersection of economics, theoretical computer science, and statistics, where uncertainty, incentives, and algorithmic decisions interact. My work spans sequential decision-making under uncertainty, online resource allocation, dynamic matching, and algorithmic/mechanism design, often with applications to platforms and marketplaces.
+</p>
+</section>
+
+<section class="home-section awards-home">
+<h2>Selected Awards</h2>
+<ul class="award-list compact">
+<li><span>2024</span> INFORMS Junior Faculty Interest Group Best Paper Award</li>
+<li><span>2024</span> Chinese Scholars Association for Management Science and Engineering Best Paper Award</li>
+<li><span>2024</span> INFORMS RMP Jeff McGill Student Paper Award (awarded to Akshit Kumar)</li>
+<li><span>2019</span> INFORMS George Nicholson Student Paper Competition, First Place</li>
+</ul>
+</section>
