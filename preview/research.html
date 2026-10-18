@@ -8,26 +8,24 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.navbar,.search-control,.research-nav,.nav-footer{display:none}main.content{padding:0;max-width:none}.profile-column{position:static}.academic-layout{grid-template-columns:170px 1fr;gap:2rem}.paper{break-inside:avoid}.paper-abstract{display:none}body{background:white;color:black}}
 
+/* Minimal revision: a compact bibliography with optional detail. */
+main.content{padding-top:2.5rem;padding-bottom:3rem}.home-section{border:0;padding:0;margin:0 0 1.5rem}.home-section h2{font-family:var(--sans);font-size:1rem;font-weight:600;margin:0 0 .75rem}.home-section p{line-height:1.75}.profile-links{flex-direction:row;flex-wrap:wrap;gap:.4rem 1rem}.office{border:0;padding:0;margin-top:.85rem}.research-header{padding:0;margin-bottom:1.3rem}.research-header h1{font-size:2rem;margin:0}.publication-section{margin-top:1.25rem;margin-bottom:1.6rem}.publication-section h2{font-family:var(--sans);font-size:1rem;font-weight:600;border:0;padding:0;margin:0 0 .55rem}.paper{display:block;border:0;padding:.55rem 0;margin:0}.paper-title{font-size:1rem;line-height:1.5;margin:0 0 .1rem;font-weight:600}.authors-after,.status-line{display:inline;font-size:.9rem;line-height:1.55;margin:0}.authors-after{margin-right:.65rem}.paper-abstract{margin-top:.15rem;font-size:.9rem}.paper-abstract summary{font-size:.85rem;padding:0;line-height:1.5}.paper-abstract[open]{background:transparent;border:0;padding:0}.paper-abstract[open] summary{margin-bottom:.4rem}.paper-abstract p{line-height:1.7;margin:.5rem 0}.paper-abstract .teaser{font-style:italic}.awards-list{font-size:.88rem}.award-list li{margin-bottom:.5rem}.navbar{border:0}.nav-footer{border:0}@media(max-width:650px){main.content{padding-top:1.5rem}.profile-column{margin-bottom:1.5rem;padding-bottom:1.2rem}.profile-links{flex-direction:column}.paper{padding:.55rem 0}.paper-title{font-size:1rem}.research-header h1{font-size:1.8rem}.home-section h2{font-size:1rem}}
+
 body{margin:0}h1,h2,h3{padding:0}h2{line-height:1.35}.navbar>.container-fluid{margin:auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.navbar-brand{text-decoration:none;color:var(--ink)}.navbar-nav{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}.navbar-nav .nav-link{margin:0;text-decoration:none}.nav-footer{max-width:1056px;margin:0 auto;padding:1.3rem 0;display:flex;justify-content:space-between;gap:1rem}summary{display:list-item}math{font-size:1em}figure{padding:0}img{max-width:100%}@media(max-width:650px){.navbar>.container-fluid{padding:0 1.25rem}.navbar-nav{gap:1rem}.nav-footer{margin:0 1.25rem;flex-direction:column;gap:.3rem}}</style></head><body><header class="navbar"><div class="container-fluid"><a class="navbar-brand navbar-title" href="index.html">Yilun Chen</a><nav aria-label="Main navigation"><ul class="navbar-nav"><li><a class="nav-link " href="index.html">Home</a></li><li><a class="nav-link active" aria-current="page" href="research.html">Research</a></li></ul></nav></div></header><main class="content" id="main">
 
 
 
 
-<header class="research-header">
-<p class="eyebrow">Research</p>
-<h1>Research &amp; publications</h1>
-<p class="research-intro">Stochastic modeling, online resource allocation, dynamic matching, and algorithmic and mechanism design.</p>
-<p><a href="https://scholar.google.com/citations?user=zay6W5kAAAAJ&amp;hl=en">Google Scholar ↗</a></p>
-</header>
-<nav class="research-nav" aria-label="Research sections"><a href="#working-papers">Working papers</a><a href="#published">Published &amp; accepted</a></nav>
-<div class="search-control" hidden=""><label for="paper-search">Find a paper</label><input id="paper-search" type="search" placeholder="Search titles, coauthors, or keywords" autocomplete="off"><p id="search-count" role="status" aria-live="polite"></p></div>
+<header class="research-header"><h1>Research</h1></header>
 
-<section class="publication-section" id="working-papers"><h2>Working papers <span class="section-count">6</span></h2><ol class="pubs">
-<li class="paper"><div class="paper-year">2026</div><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7516598">Beyond Hindsight: A Constant-Loss Framework for Dynamic Resource Allocation</a></h3>
+
+
+<section class="publication-section" id="working-papers"><h2>Working papers</h2><ol class="pubs">
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7516598">Beyond Hindsight: A Constant-Loss Framework for Dynamic Resource Allocation</a></h3>
 <p class="authors-after">with Wenjia Wang</p>
 <div class="status-line">Working paper.</div>
-<p class="teaser">CE acheives constant loss against DP under smoothness and non-degeneracy, even with correlation!</p>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Beyond Hindsight: A Constant-Loss Framework for Dynamic Resource Allocation</span></summary><p>We study stochastic dynamic resource allocation with continuously
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Beyond Hindsight: A Constant-Loss Framework for Dynamic Resource Allocation</span></summary><p class="teaser">CE acheives constant loss against DP under smoothness and non-degeneracy, even with correlation!</p><p>We study stochastic dynamic resource allocation with continuously
 distributed rewards. We develop an analytical framework that bounds the
 additive performance loss of threshold policies directly against the
 dynamic-programming (DP) optimum. The framework reduces this comparison
@@ -46,12 +44,12 @@ understanding of CE and establish its near-optimality for dynamic
 resource allocation problems across a substantially broader class of
 stochastic models.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2026</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2608.01069v2">Sharp Characterizatioin of Bias in Post-Bandit Inference</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2608.01069v2">Sharp Characterizatioin of Bias in Post-Bandit Inference</a></h3>
 <p class="authors-after">with Lisu Wang and Jiaqi Lu</p>
 <div class="status-line">Working paper.</div>
-<p class="teaser">A precise quantification of sample mean bias of data collected from bandit experiments.</p>
-<ul class="awards-list"><li class="award-item other">Shorter version in NeurIPS 2026 Workshop MLxOR</li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Sharp Characterizatioin of Bias in Post-Bandit Inference</span></summary><p>Bandit algorithms generate data for downstream inference, but
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Sharp Characterizatioin of Bias in Post-Bandit Inference</span></summary><p class="teaser">A precise quantification of sample mean bias of data collected from bandit experiments.</p><ul class="awards-list"><li class="award-item other">Shorter version in NeurIPS 2026 Workshop MLxOR</li></ul><p>Bandit algorithms generate data for downstream inference, but
 adaptive sampling biases post-bandit sample means. We analyze this bias
 for stable index algorithms, including <code>UCB1</code> and its
 generalizations, and derive sharp leading-order expressions for the
@@ -71,12 +69,12 @@ algorithm reduces bias but increases regret. Our sharp characterization
 for bias uses a novel empirical fluid approximation of the algorithm’s
 sampling dynamics, which may be of independent interest.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2026</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2602.07472">Bandit Allocational Instability</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2602.07472">Bandit Allocational Instability</a></h3>
 <p class="authors-after">with Jiaqi Lu</p>
 <div class="status-line">Under revision.</div>
-<p class="teaser">A fundamental tradeoff between regret and the variability of pull allocation in bandit learning.</p>
-<ul class="awards-list"><li class="award-item other">Preliminary version in ACM EC'26</li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Bandit Allocational Instability</span></summary><p>When multi-armed bandit (MAB) algorithms allocate pulls among
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Bandit Allocational Instability</span></summary><p class="teaser">A fundamental tradeoff between regret and the variability of pull allocation in bandit learning.</p><ul class="awards-list"><li class="award-item other">Preliminary version in ACM EC'26</li></ul><p>When multi-armed bandit (MAB) algorithms allocate pulls among
 competing arms, the resulting allocation can exhibit huge variation.
 This is particularly harmful in modern applications such as
 learning-enhanced platform operations and statistical inference using
@@ -110,12 +108,12 @@ we discuss implications for platform operations and for statistical
 inference, when bandit algorithms are used. As a byproduct of our
 result, we resolve an open question of Praharaj and Khamaru (2025).</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2025</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2503.04855">A Characterization of Sample Adaptivity in UCB Data</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2503.04855">A Characterization of Sample Adaptivity in UCB Data</a></h3>
 <p class="authors-after">with Jiaqi Lu</p>
 <div class="status-line">Working paper.</div>
-<p class="teaser">How far does bandit-collected data deviate from i.i.d.-sampling?</p>
-<ul class="awards-list"><li class="award-item other">Shorter version in NeurIPS 2026 Workshop MLxOR</li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: A Characterization of Sample Adaptivity in UCB Data</span></summary><p>We characterize a joint CLT of the number of pulls and the sample
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: A Characterization of Sample Adaptivity in UCB Data</span></summary><p class="teaser">How far does bandit-collected data deviate from i.i.d.-sampling?</p><ul class="awards-list"><li class="award-item other">Shorter version in NeurIPS 2026 Workshop MLxOR</li></ul><p>We characterize a joint CLT of the number of pulls and the sample
 mean reward of the arms in a stochastic two-armed bandit environment
 under UCB algorithms. Several implications of this result are in place:
 (1) a nonstandard CLT of the number of pulls hence pseudo-regret that
@@ -126,11 +124,11 @@ from the correlation between the number of pulls and sample means. Our
 analysis framework is based on a novel perturbation analysis, which is
 of broader interest on its own.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2025</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2508.13458">Online Stochastic Packing with General Correlations</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2508.13458">Online Stochastic Packing with General Correlations</a></h3>
 <p class="authors-after">with Sabri Cetin and David A. Goldberg</p>
 <div class="status-line">Under revision.</div>
-<p class="teaser">A constant-time approximation algorithm for online packing under arbitrary dependence.</p>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Online Stochastic Packing with General Correlations</span></summary><p>There has been a growing interest in studying online stochastic
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Online Stochastic Packing with General Correlations</span></summary><p class="teaser">A constant-time approximation algorithm for online packing under arbitrary dependence.</p><p>There has been a growing interest in studying online stochastic
 packing under more general correlation structures, motivated by the
 complex data sets and models driving modern applications. Several past
 works either assume correlations are weak or have a particular
@@ -152,11 +150,11 @@ implement stochastic gradient methods in a novel on-the-fly/recursive
 manner for the associated massive deterministic-equivalent linear
 program on the corresponding probability space.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2025</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2501.01716">Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for Online Linear Programming</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/2501.01716">Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for Online Linear Programming</a></h3>
 <p class="authors-after">with Wenjia Wang</p>
 <div class="status-line">Under revision.</div>
-<p class="teaser">Is non-degeneracy really essential for CE to achieve low regret?</p>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for Online Linear Programming</span></summary><p>The Certainty Equivalent (CE) heuristic is a widely-used algorithm
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for Online Linear Programming</span></summary><p class="teaser">Is non-degeneracy really essential for CE to achieve low regret?</p><p>The Certainty Equivalent (CE) heuristic is a widely-used algorithm
 for various dynamic resource allocation problems in OR and OM. Despite
 its popularity, existing theoretical guarantees of CE are limited to
 settings satisfying restrictive fluid regularity conditions,
@@ -189,13 +187,13 @@ potential applications in broader online and offline stochastic
 decision-making contexts.</p></details>
 </div></li>
 </ol></section>
-<section class="publication-section" id="published"><h2>Published and accepted <span class="section-count">4</span></h2><ol class="pubs">
-<li class="paper"><div class="paper-year">2026</div><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4727705">Managing Newsvendors via Demand Shifting</a></h3>
+<section class="publication-section" id="published"><h2>Published and accepted</h2><ol class="pubs">
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4727705">Managing Newsvendors via Demand Shifting</a></h3>
 <p class="authors-after">with Jiaqi Lu</p>
 <div class="status-line"><i><b>Operations Research</b></i>. accepted.</div>
-<p class="teaser">Demand reshaping is a powerful control lever.</p>
-<ul class="awards-list"><li class="award-item other">Preliminary version in ACM EC'24 <a href="https://dl.acm.org/doi/10.1145/3670865.3673568">[link]</a></li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Managing Newsvendors via Demand Shifting</span></summary><p>The increasingly prevalent ‘fulfillment by platform‘ practice in the
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Managing Newsvendors via Demand Shifting</span></summary><p class="teaser">Demand reshaping is a powerful control lever.</p><ul class="awards-list"><li class="award-item other">Preliminary version in ACM EC'24 <a href="https://dl.acm.org/doi/10.1145/3670865.3673568">[link]</a></li></ul><p>The increasingly prevalent ‘fulfillment by platform‘ practice in the
 digital economy presents platforms with the unique challenge of managing
 their third-party sellers’ autonomous inventory decision-making. In this
 work, we explore a novel idea to mitigate this challenge through nudging
@@ -217,12 +215,12 @@ can achieve the centralization benchmark. On the contrary, if the
 products are not substitutable enough, the platform’s service level to
 the customers may, in certain primitive regimes, decrease.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2026</div><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/1807.02227">Polynomial time algorithm for optimal stopping with fixed accuracy</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://arxiv.org/pdf/1807.02227">Polynomial time algorithm for optimal stopping with fixed accuracy</a></h3>
 <p class="authors-after">with David A. Goldberg</p>
 <div class="status-line"><i><b>Stochastic Systems</b></i>. <a href="https://doi.org/10.1287/stsy.2024.0075">[link]</a></div>
-<p class="teaser">PTAS for optimal stopping under arbitrary dependence.</p>
-<ul class="awards-list"><li class="award-item award">First Place, 2019 INFORMS Nicholson Student Paper Competition</li><li class="award-item award">Finalist, 2018 INFORMS Section on Finance Student Best Paper Award</li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Polynomial time algorithm for optimal stopping with fixed accuracy</span></summary><p>The optimal stopping (OS) problem is important to multiple academic
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Polynomial time algorithm for optimal stopping with fixed accuracy</span></summary><p class="teaser">PTAS for optimal stopping under arbitrary dependence.</p><ul class="awards-list"><li class="award-item award">First Place, 2019 INFORMS Nicholson Student Paper Competition</li><li class="award-item award">Finalist, 2018 INFORMS Section on Finance Student Best Paper Award</li></ul><p>The optimal stopping (OS) problem is important to multiple academic
 communities and applications. Modern OS tasks often have long horizon
 and complicated, high-dimensional dynamics, making them especially
 challenging. Standard dynamic programming (DP) formulation has
@@ -237,12 +235,12 @@ the underlying dimension. Our approach is closely related to the
 martingale duality of OS, which may be of independent theoretical
 interest.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2025</div><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4586771">Incentivizing Resource Pooling</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4586771">Incentivizing Resource Pooling</a></h3>
 <p class="authors-after">with Chen Chen and Pengyu Qian</p>
 <div class="status-line"><i><b>Management Science</b></i>. <a href="https://doi.org/10.1287/mnsc.2023.03550">[link]</a></div>
-<p class="teaser">A token mechanism that aligns self-interested servers to collectively achieve centralized efficiency.</p>
-<ul class="awards-list"><li class="award-item award">First Place, 2024 INFORMS JFIG Best Paper Competition</li><li class="award-item award">First Prize, 2024 CSAMSE Best Paper Award</li><li class="award-item other">Presentation at MSOM Service Management SIG 2024</li><li class="award-item other">Preliminary version in ACM EC'24 <a href="https://dl.acm.org/doi/10.1145/3670865.3673450">[link]</a></li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Incentivizing Resource Pooling</span></summary><p>Resource pooling improves system efficiency drastically in large
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Incentivizing Resource Pooling</span></summary><p class="teaser">A token mechanism that aligns self-interested servers to collectively achieve centralized efficiency.</p><ul class="awards-list"><li class="award-item award">First Place, 2024 INFORMS JFIG Best Paper Competition</li><li class="award-item award">First Prize, 2024 CSAMSE Best Paper Award</li><li class="award-item other">Presentation at MSOM Service Management SIG 2024</li><li class="award-item other">Preliminary version in ACM EC'24 <a href="https://dl.acm.org/doi/10.1145/3670865.3673450">[link]</a></li></ul><p>Resource pooling improves system efficiency drastically in large
 stochastic systems, but its effective implementation in decentralized
 systems remains relatively underexplored. This paper studies how to
 incentivize resource pooling when agents are self-interested, and their
@@ -267,12 +265,12 @@ mechanism achieves the first-best performance even when helping others
 incurs higher job processing costs and remains nearly optimal in
 settings with heterogeneous servers.</p></details>
 </div></li>
-<li class="paper"><div class="paper-year">2025</div><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451799">Feature-Based Dynamic Matching</a></h3>
+<li class="paper"><div class="paper-body"><h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4451799">Feature-Based Dynamic Matching</a></h3>
 <p class="authors-after">with Yash Kanoria, Akshit Kumar and Wenxin Zhang</p>
 <div class="status-line"><i><b>Operations Research</b></i>. <a href="https://doi.org/10.1287/opre.2024.0730">[link]</a></div>
-<p class="teaser">A lightweight MPC-inspired algorithm with near-optimal matching performance.</p>
-<ul class="awards-list"><li class="award-item award">First Place, 2024 INFORMS RMP Jeff McGill Student Paper Competition (awarded to Akshit Kumar)</li><li class="award-item award">Third Place, 2025 Michael H. Rothkopf Junior Research Paper Prize (awarded to Akshit Kumar)</li><li class="award-item other">Preliminary version in ACM EC'23 <a href="https://dl.acm.org/doi/10.1145/3580507.3597797">[link]</a> | <a href="https://nickarnosti.com/blog/soar/">Nick Arnosti's blog</a> </li></ul>
-<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Feature-Based Dynamic Matching</span></summary><p>Motivated by matching platforms that match agents in a centralized
+
+
+<details class="paper-abstract"><summary>Abstract<span class="visually-hidden">: Feature-Based Dynamic Matching</span></summary><p class="teaser">A lightweight MPC-inspired algorithm with near-optimal matching performance.</p><ul class="awards-list"><li class="award-item award">First Place, 2024 INFORMS RMP Jeff McGill Student Paper Competition (awarded to Akshit Kumar)</li><li class="award-item award">Third Place, 2025 Michael H. Rothkopf Junior Research Paper Prize (awarded to Akshit Kumar)</li><li class="award-item other">Preliminary version in ACM EC'23 <a href="https://dl.acm.org/doi/10.1145/3580507.3597797">[link]</a> | <a href="https://nickarnosti.com/blog/soar/">Nick Arnosti's blog</a> </li></ul><p>Motivated by matching platforms that match agents in a centralized
 manner, we study dynamic two-sided matching in a setting where both
 customers (demand) and service providers (supply) are heterogeneous and
 the pool of service providers is limited. We model heterogeneity on the
@@ -294,32 +292,8 @@ policy which may be of broader interest. As a corollary of our
 techniques, we also resolve an open problem posed in Kanoria [2022].</p></details>
 </div></li>
 </ol></section>
-<p id="no-results" hidden="">No papers match your search. Try another keyword or clear the search.</p>
-<script>
-// Progressive enhancement: all papers and abstracts remain available without JS.
-document.addEventListener('DOMContentLoaded', () => {
-  const search = document.getElementById('paper-search');
-  if (!search) return;
-  const papers = [...document.querySelectorAll('.paper')];
-  document.querySelector('.search-control').hidden = false;
-  const filter = () => {
-    const words = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-    let count = 0;
-    papers.forEach(paper => {
-      paper.hidden = !words.every(word => paper.textContent.toLowerCase().includes(word));
-      if (!paper.hidden) count++;
-    });
-    document.getElementById('search-count').textContent = `${count} of ${papers.length} papers`;
-    document.getElementById('no-results').hidden = count > 0;
-    document.querySelectorAll('.publication-section').forEach(section => {
-      section.hidden = ![...section.querySelectorAll('.paper')].some(paper => !paper.hidden);
-    });
-  };
-  search.addEventListener('input', filter);
-  filter();
-});
 
-</script>
+
 
 
 
