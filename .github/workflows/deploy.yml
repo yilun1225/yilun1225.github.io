@@ -28,7 +28,7 @@ jobs:
           quarto render
           if [ -d preview ]; then
             mkdir -p _site/preview
-            cp -a preview/. _site/preview/; cp -a preview/. _site/; sed -i 's/<meta name="robots" content="noindex,nofollow">//; s# | Preview</title>#</title>#' _site/index.html _site/research.html; cp _site/research.html _site/publication_bydate.html; cp _site/research.html _site/publication.html
+            cp -a preview/. _site/preview/; git fetch --depth=1 https://github.com/yilun1225/yilun1225.github.io.git 2a9c6ea907b7384670f2f4bf9816619031dde782; release_dir=$(mktemp -d); git archive 2a9c6ea907b7384670f2f4bf9816619031dde782 preview | tar -x -C "$release_dir"; cp -a "$release_dir/preview/." _site/; sed -i 's/<meta name="robots" content="noindex,nofollow">//; s# | Preview</title>#</title>#' _site/index.html _site/research.html; cp _site/research.html _site/publication_bydate.html; cp _site/research.html _site/publication.html
           fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
