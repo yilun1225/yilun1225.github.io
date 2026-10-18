@@ -1,0 +1,56 @@
+name: Deploy original academic homepage
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # Temporary migration baseline. Original repository remains unchanged.
+      - name: Check out approved public source snapshot
+        uses: actions/checkout@v4
+        with:
+          repository: yC1225/my-site
+          ref: 2711af3bf2d4114e1d970ae0a10b0d7a4a30f8fc
+          persist-credentials: false
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set new canonical site URL
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('_quarto.yml')
+          text = path.read_text()
+          text = text.replace('website:\n', 'website:\n  site-url: https://yilun1225.github.io\n', 1)
+          path.write_text(text)
+          PY
+      - name: Render unchanged public site
+        run: quarto render
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
