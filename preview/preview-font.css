@@ -1,0 +1,4 @@
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("InterVariable.woff2") format("woff2")}@font-face{font-family:"Inter";font-style:italic;font-weight:100 900;font-display:swap;src:url("InterVariable-Italic.woff2") format("woff2")}
+:root{--sans:"Inter",system-ui,sans-serif;--serif:"Inter",system-ui,sans-serif}body{font-family:var(--sans);font-weight:400}h1,h2,h3,.navbar-title,.home-name{font-family:var(--sans)}.paper-title,.publication-section h2,.home-section h2{font-weight:600}.authors-after,.status-line,.teaser,.publication-credit{font-weight:400}.chinese-name{font-family:var(--sans),"Songti SC","SimSun",sans-serif}
+
+.authors-after:not(:empty) + .status-line:not(:empty)::before{content:"·";margin-right:.55em;color:var(--muted)}
