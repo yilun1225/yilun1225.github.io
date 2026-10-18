@@ -28,7 +28,7 @@ jobs:
           quarto render
           if [ -d preview ]; then
             mkdir -p _site/preview
-            cp -a preview/. _site/preview/
+            cp -a preview/. _site/preview/; cp -a preview/. _site/; sed -i 's/<meta name="robots" content="noindex,nofollow">//; s# | Preview</title>#</title>#' _site/index.html _site/research.html; cp _site/research.html _site/publication_bydate.html; cp _site/research.html _site/publication.html
           fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
