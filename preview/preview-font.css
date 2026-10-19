@@ -13,3 +13,13 @@ header.navbar{padding:1.2rem 0}header.navbar>.container-fluid{align-items:center
 
 /* Preview-only paper title experiment; section labels remain unchanged. */
 #main .paper-title,#main .paper-title a{font-weight:660}
+
+/* research-content-16: preview research text; bracketed controls keep their sizes. */
+#main .paper .authors-after,
+#main .paper .status-line,
+#main .paper .publication-credit,
+#main .paper .teaser,
+#main .paper .paper-panel,
+#main .paper .panel-content{font-size:16px}
+#main .paper .status-line a,
+#main .paper-panel[id$="-more"] a[href^="https://dl.acm.org/doi/"]{font-size:.9rem}
