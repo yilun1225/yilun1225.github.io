@@ -23,3 +23,8 @@ header.navbar{padding:1.2rem 0}header.navbar>.container-fluid{align-items:center
 #main .paper .panel-content{font-size:16px}
 #main .paper .status-line a,
 #main .paper-panel[id$="-more"] a[href^="https://dl.acm.org/doi/"]{font-size:.9rem}
+
+/* Radley preview: English identity and research section headings only. */
+@font-face{font-family:"Radley";font-style:normal;font-weight:400;font-display:swap;src:url("https://fonts.gstatic.com/s/radley/v24/LYjDdGzinEIjCN19oA.ttf") format("truetype")}
+header.navbar .site-identity .latin-name{font-family:"Radley",Georgia,serif;font-size:33px;font-weight:400;font-synthesis:none}
+main#main .publication-section h2{font-family:"Radley",Georgia,serif;font-size:24px;font-weight:400;font-synthesis:none}
