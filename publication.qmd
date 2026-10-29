@@ -107,13 +107,13 @@ format:
     "topics": ["platform"]
   },
   {
-    "title": "Managing Newsvendors: A Demand Meachanism",
+    "title": "Managing Newsvendors via Demand Shifting",
     "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4727705",
     "authors": "Jiaqi Lu",
-    "year": 2024,
+    "year": 2026,
     "bucket": "Preprints",
     "rank": 5,
-    "status": "Under revision.",
+    "status": "<i><b>Operations Research</b></i>, 2026 (advance online publication) <a href='https://doi.org/10.1287/opre.2024.1396'>[link]</a>",
     "awards": [ {"type": "other", "text": "Preliminary version in ACM EC'24 <a href='https://dl.acm.org/doi/10.1145/3670865.3673568'>[link]</a>"}],
     "teaser": "A Stackelberg platform uses price and allocation rules to shift demand while respecting supply constraints.",
     "abstract": "We model platform-driven demand shifting...",
