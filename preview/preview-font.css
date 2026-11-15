@@ -1,30 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,450;8..60,550;8..60,650;8..60,700&display=swap");
+/* Scholarly reading typography. Serif for ideas; sans-serif for navigation and metadata. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap");
 
-:root{--sans:"Source Sans 3",Aptos,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--serif:"Source Serif 4",Charter,"Iowan Old Style",Georgia,serif}body{font-family:var(--sans);font-weight:400}h1,h2,h3,.navbar-title,.home-name{font-family:var(--serif)}
-.paper-title,.publication-section h2,.home-section h2{font-family:var(--sans)}
-.latin-name{font-family:"Source Serif 4","Iowan Old Style",Charter,Georgia,serif}.paper-title,.publication-section h2,.home-section h2{font-weight:600}.authors-after,.status-line,.teaser,.publication-credit{font-weight:400}.chinese-name{font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif}
-
-.paper-controls button[id$="-awards-button"]{color:var(--accent)}
-header.navbar{padding:1.2rem 0}header.navbar>.container-fluid{align-items:center;gap:1.5rem}header.navbar .site-identity{align-items:center;gap:0;font-size:2rem;line-height:1.2;letter-spacing:-.025em}header.navbar .site-identity .latin-name{white-space:nowrap}header.navbar .site-identity .chinese-name{font-size:1.4rem;font-weight:500;line-height:1.2;letter-spacing:.08em;margin:0 0 0 1.1rem;padding-left:1.1rem;border-left:1px solid #d8ddd9;color:#536169;white-space:nowrap}header.navbar .navbar-nav{gap:1.65rem}header.navbar .navbar-nav .nav-link{font-size:.94rem;line-height:1.4}header.navbar .navbar-nav .nav-link.active{text-decoration-thickness:1px;text-underline-offset:.45rem}@media(max-width:650px){header.navbar{padding:1rem 0}header.navbar>.container-fluid{flex-wrap:wrap;gap:.9rem}header.navbar .site-identity{font-size:1.75rem}header.navbar .site-identity .chinese-name{font-size:1.2rem;margin-left:.8rem;padding-left:.8rem}header.navbar nav{margin-left:0}header.navbar .navbar-nav{gap:1.35rem}}
-
-/* Self-hosted variable Source Sans 3: true interpolation, including 660. */
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:200 900;font-display:swap;src:url("SourceSans3VF-Upright.ttf.woff2") format("woff2")}
 @font-face{font-family:"Source Sans 3";font-style:italic;font-weight:200 900;font-display:swap;src:url("SourceSans3VF-Italic.ttf.woff2") format("woff2")}
+:root{--sans:"Source Sans 3",Aptos,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--serif:"Source Serif 4",Charter,"Iowan Old Style",Georgia,serif}
+body{font-family:var(--sans);font-weight:400;font-synthesis:none}
 
-/* Preview-only paper title experiment; section labels remain unchanged. */
-#main .paper-title,#main .paper-title a{font-weight:660}
+/* A quiet identity, clearly separated from the navigational controls. */
+header.navbar{padding:1.2rem 0}
+header.navbar>.container-fluid{align-items:center;gap:1.5rem}
+header.navbar .site-identity{align-items:center;gap:0;line-height:1.15;letter-spacing:normal}
+header.navbar .site-identity .latin-name{font-family:var(--serif);font-size:36px;font-weight:500;letter-spacing:-.02em;white-space:nowrap}
+header.navbar .site-identity .chinese-name{font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;font-size:21px;font-weight:500;line-height:1.2;letter-spacing:.06em;margin:0 0 0 1.1rem;padding-left:1.1rem;border-left:1px solid #d8ddd9;color:#536169;white-space:nowrap}
+header.navbar .navbar-nav{gap:1.65rem}
+header.navbar .navbar-nav .nav-link{font-family:var(--sans);font-size:16px;line-height:1.4}
+header.navbar .navbar-nav .nav-link.active{text-decoration-thickness:1px;text-underline-offset:.45rem}
 
-/* research-content-16: preview research text; bracketed controls keep their sizes. */
-#main .paper .authors-after,
-#main .paper .status-line,
-#main .paper .publication-credit,
-#main .paper .teaser,
-#main .paper .paper-panel,
-#main .paper .panel-content{font-size:16px}
-#main .paper .status-line a,
-#main .paper-panel[id$="-more"] a[href^="https://dl.acm.org/doi/"]{font-size:.9rem}
+/* Long-form reading, without enlarging the existing layout or paper spacing. */
+body main#main .home-body{font-family:var(--serif);font-size:18px;font-weight:400;line-height:1.62}
+body main#main .home-section p{font-family:var(--serif);font-size:18px;font-weight:400;line-height:1.62;max-width:72ch}
+body main#main .home-section h2{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:normal;line-height:1.25;margin-bottom:.55rem}
+body main#main .research-interest-list{font-family:var(--serif);font-size:18px;line-height:1.5}
+body main#main .appointment,body main#main .profile-links,body main#main .office{font-family:var(--sans);font-size:15px;line-height:1.5}
+body main#main .award-list li{font-family:var(--sans);font-size:16px;line-height:1.5}
+body main#main .award-list span{font-family:var(--sans);font-size:15px;font-variant-numeric:tabular-nums}
+body .nav-footer{font-family:var(--sans);font-size:14px;line-height:1.5}
 
-/* Radley preview: English identity and research section headings only. */
-@font-face{font-family:"Radley";font-style:normal;font-weight:400;font-display:swap;src:url("https://fonts.gstatic.com/s/radley/v24/LYjDdGzinEIjCN19oA.ttf") format("truetype")}
-header.navbar .site-identity .latin-name{font-family:"Radley",Georgia,serif;font-size:33px;font-weight:400;font-synthesis:none}
-main#main .publication-section h2{font-family:"Radley",Georgia,serif;font-size:24px;font-weight:400;font-synthesis:none}
+/* Paper titles are the primary reading path; supporting information stays compact. */
+body main#main .publication-section h2{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:normal;line-height:1.25;margin-bottom:8px}
+body main#main .paper-title,body main#main .paper-title a{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:normal;line-height:1.3;color:#315f83}
+body main#main .paper .authors-after,body main#main .paper .status-line,body main#main .paper .publication-credit{font-family:var(--sans);font-size:15px;font-weight:400;line-height:1.45}
+body main#main .paper .teaser{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.5}
+body main#main .paper .paper-panel,body main#main .paper .panel-content,body main#main .paper-panel p{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.6}
+body main#main .paper-controls button,body main#main .panel-less{font-family:var(--sans);font-size:14px;line-height:1.5}
+body main#main .paper-panel ul{font-family:var(--sans);font-size:15px;line-height:1.5}
+.paper-controls button[id$="-awards-button"]{color:var(--accent)}
+
+@media(max-width:650px){
+ header.navbar{padding:1rem 0}
+ header.navbar>.container-fluid{flex-wrap:wrap;gap:.9rem}
+ header.navbar .site-identity .latin-name{font-size:30px}
+ header.navbar .site-identity .chinese-name{font-size:19px;margin-left:.8rem;padding-left:.8rem}
+ header.navbar nav{margin-left:0}
+ header.navbar .navbar-nav{gap:1.35rem}
+ body main#main .home-body,body main#main .home-section p,body main#main .research-interest-list{font-size:17px}
+ body main#main .home-section h2{font-size:22px}
+ body main#main .publication-section h2{font-size:24px}
+ body main#main .paper-title,body main#main .paper-title a{font-size:19px;line-height:1.3}
+}
